@@ -13,7 +13,7 @@ const RepoList = () => {
     <div className='repo-list'>
       {
         repositories.map(repo=>{
-          return <Repo repo={repo}/>
+          return <Repo key={repo.id} repo={repo}/>
         })
       }
 

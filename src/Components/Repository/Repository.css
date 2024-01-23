@@ -1,0 +1,11 @@
+.repository-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 16px;
+}
+
+.owner{
+    border-radius: 50%;
+}

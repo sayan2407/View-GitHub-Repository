@@ -6,9 +6,7 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
     const [userName, setUserName] = useState('');
     const [repositories, setRepositories] = useState([]);
-    const [user, setUser] = useState(null);
     const [repository, setRepository] = useState(null);
-    const [followers, setFollowers] = useState([]);
   
     return (
       <AppContext.Provider
@@ -17,12 +15,8 @@ export const AppProvider = ({ children }) => {
           setUserName,
           repositories,
           setRepositories,
-          user,
-          setUser,
           repository,
           setRepository,
-          followers,
-          setFollowers,
         }}
       >
         {children}

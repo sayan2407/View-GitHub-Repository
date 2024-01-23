@@ -1,17 +1,20 @@
 import "./Repo.css";
+import {Link} from 'react-router-dom';
 
-const Repo = ({repo}) => {
+const Repo = ({ repo }) => {
   return (
-    <div className="repo-card">
+    <Link className="repo-card" to={`/repository/${repo.owner.login}/${repo.name}`}>
+      {/* <div > */}
         <div className="repo-img">
-            <img src={repo.owner.avatar_url} width="50px" height="50px"/>
+          <img src={repo.owner.avatar_url} width="50px" height="50px" />
         </div>
         <div className="repo-details">
-            <h3>{repo.name}</h3>
-            <p>{repo.description}</p>
+          <h3>{repo.name}</h3>
+          <p>{repo.description}</p>
         </div>
-    </div>
-  )
-}
+      {/* </div> */}
+    </Link>
+  );
+};
 
-export default Repo
+export default Repo;

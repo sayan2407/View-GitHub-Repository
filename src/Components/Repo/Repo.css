@@ -1,0 +1,29 @@
+
+.repo-card {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 8px;
+
+}
+
+.repo-details {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    align-items: flex-start;
+    padding: 5px 0;
+}
+
+.repo-img {
+    flex: 1;
+}
+
+.repo-img img {
+    border-radius: 50%;
+    border-bottom: 1px solid #ddd;
+
+}

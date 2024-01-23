@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useContext, useState } from "react";
 import "./SearchForm.css";
 import { useAppContext } from "../../context/AppProvider";
 import config from "../../config/config";
@@ -10,17 +9,14 @@ const SearchForm = () => {
   const { userName, setUserName, setRepositories } = useAppContext();
   const handleSearch = async () => {
     try {
+        console.log('userName ', userName);
       const response = await axios.get(
         `${config.apiUrl}/users/${userName}/repos`
       );
       console.log(response.data);
       setRepositories(response.data);
     } catch (error) {
-      if (error.response && error.response.status === 404) {
-        console.log("User not found");
-      } else {
-        console.error("An error occurred:", error.message);
-      }
+      console.log(error);
     }
   };
 
